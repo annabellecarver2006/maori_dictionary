@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block pageheading %}
+Dictionary
+{% endblock %}
+
+{% block main %}
+
+<div class="words">
+  {% for vocab in vocab_list %}
+    <div class="product-box">
+      <div class="product-box-heading">
+        <h3>{{ vocab[0] }}</h3>
+      </div>
+      <div class="product-box-info">
+        <p>{{ vocab[1] }}</p>
+        <p><strong>Size:</strong> {{ vocab[2] }}</p>
+        <p><strong>Price:</strong> ${{ vocab[4] }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
